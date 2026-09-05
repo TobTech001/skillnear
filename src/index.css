@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Tailwind CSS v4 directive; ignored by standard CSS linters. */
+/* stylelint-disable-next-line at-rule-no-unknown */
+@theme {
+  /* Color tokens — SkillNear AI, clean modern tech identity:
+     deep teal-blue as the brand color, a brighter cyan-teal for live/CTA
+     accents, warm coral reserved for urgent status only. */
+  --color-ink: #0b1220;
+  --color-paper: #ffffff;
+  --color-paper-dim: #f2f6f7;
+  --color-primary: #0e6b76;
+  --color-primary-deep: #093f47;
+  --color-accent: #17b8a6;
+  --color-accent-soft: #e4f7f4;
+  --color-signal-green: #16a34a;
+  --color-signal-amber: #d98c1f;
+  --color-signal-red: #ef4444;
+  --color-line: #e1e7ea;
+
+  --font-display: "Sora", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+  }
+  body {
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background-color: var(--color-accent-soft);
+    color: var(--color-primary-deep);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
